@@ -1,0 +1,66 @@
+{{> partials/header}}
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <h1>Organiser Dashboard</h1>
+        <p>Welcome, {{user.email}}</p>
+    </header>
+
+    {{#error}}
+        <div class="alert alert-error">{{error}}</div>
+    {{/error}}
+    {{#success}}
+        <div class="alert alert-success">{{success}}</div>
+    {{/success}}
+
+    <section class="dashboard-section">
+        <h2>Manage Courses</h2>
+        <a href="/organiser/add" class="btn btn-primary">Add New Course</a>
+        <div class="course-list">
+            {{#courses}}
+                <div class="course-card">
+                    <div class="course-info">
+                        <h3>{{name}}</h3>
+                        <p>{{duration}}</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="/organiser/edit/{{_id}}" class="btn btn-secondary">Edit</a>
+                        <form action="/organiser/delete/{{_id}}" method="POST">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                        <a href="/organiser/class-list/{{_id}}" class="btn btn-info">View Class List</a>
+                    </div>
+                </div>
+            {{/courses}}
+            {{^courses}}
+                <p>No courses available. Add a new course to get started.</p>
+            {{/courses}}
+        </div>
+    </section>
+
+    <section class="dashboard-section">
+        <h2>Manage Organisers</h2>
+        <div class="organiser-management">
+            <div class="organiser-list">
+                <h3>Organisers</h3>
+                <form action="/organiser/remove-organiser" method="POST" class="remove-user-form">
+                    <select name="email" id="organiser-select" required>
+                        <option value="">-- Select Organiser --</option>
+                        {{#organisers}}
+                            <option value="{{email}}">{{email}}</option>
+                        {{/organisers}}
+                    </select>
+                    <button type="submit" class="btn btn-danger">Remove Selected</button>
+                </form>
+            </div>
+            <div class="organiser-add">
+                <h3>Add Organiser</h3>
+                <form action="/organiser/add-user" method="POST" class="add-user-form">
+                    <label>Email: <input type="email" name="email" required></label>
+                    <label>Password: <input type="password" name="password" required></label>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+{{> partials/footer}}

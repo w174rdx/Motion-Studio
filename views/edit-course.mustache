@@ -1,0 +1,49 @@
+{{> partials/header}}
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <h1>Edit Course</h1>
+        <p>Update the course details below</p>
+    </header>
+
+    {{#error}}
+        <div class="alert alert-error">{{error}}</div>
+    {{/error}}
+
+    <section class="dashboard-section">
+        <h2>Course Details</h2>
+        <form action="/organiser/edit/{{course._id}}" method="POST" enctype="multipart/form-data" class="course-form">
+            <label>Name: <input type="text" name="name" value="{{course.name}}" required></label>
+            <label>Duration: <input type="text" name="duration" value="{{course.duration}}" required></label>
+            <label>Current Picture:
+                {{#course.picture}}
+                    <img src="{{course.picture}}" alt="{{course.name}} image" style="max-width: 200px; margin-top: 0.5rem;">
+                {{/course.picture}}
+                {{^course.picture}}
+                    <span>No image uploaded</span>
+                {{/course.picture}}
+            </label>
+            <input type="hidden" name="existingPicture" value="{{course.picture}}">
+            <label>Upload New Picture (optional): <input type="file" name="picture" accept="image/*"></label>
+
+            <h3>Classes</h3>
+            <div id="classes-container">
+                {{#course.classes}}
+                    <div class="class-entry">
+                        <label>Date: <input type="date" name="classes[{{@index}}][date]" value="{{date}}" required></label>
+                        <label>Time: <input type="time" name="classes[{{@index}}][time]" value="{{time}}" required></label>
+                        <label>Description: <input type="text" name="classes[{{@index}}][description]" value="{{description}}" required></label>
+                        <label>Location: <input type="text" name="classes[{{@index}}][location]" value="{{location}}" required></label>
+                        <label>Price: <input type="text" name="classes[{{@index}}][price]" value="{{price}}" required></label>
+                        <button type="button" class="btn btn-danger remove-class">Remove Class</button>
+                        <hr>
+                    </div>
+                {{/course.classes}}
+            </div>
+            <button type="button" id="add-class" class="btn btn-info">Add Another Class</button>
+            <button type="submit" class="btn btn-primary add-course">Update Course</button>
+        </form>
+    </section>
+</div>
+<!-- IMPORTANT: Do not remove this script, as it handles dynamic class addition/removal -->
+<script src="/js/script.js"></script>
+{{> partials/footer}}

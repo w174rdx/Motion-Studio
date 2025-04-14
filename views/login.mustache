@@ -1,0 +1,12 @@
+{{> partials/header}}
+<h1>Login</h1>
+{{#error}}
+    <p style="color: red;">{{error}}</p>
+{{/error}}
+<form action="/login" method="POST" class="auth-form">
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Password: <input type="password" name="password" required></label><br>
+    <button type="submit">Login</button>
+</form>
+<p>Not registered yet? <a href="/register">Click here to register</a></p>
+{{> partials/footer}}

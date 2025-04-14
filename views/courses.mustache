@@ -1,0 +1,27 @@
+{{> partials/header}}
+<h1>Our Courses</h1>
+{{#success}}
+    <p style="color: green;">{{success}}</p>
+{{/success}}
+<div class="course-list">
+    {{#courses}}
+        <div class="course-card">
+            <div class="course-image">
+                {{#picture}}
+                    <img src="{{picture}}" alt="{{name}} image">
+                {{/picture}}
+                {{^picture}}
+                    <div class="no-image">No Image</div>
+                {{/picture}}
+            </div>
+            <div class="course-info">
+                <h3><a href="/courses/{{_id}}">{{name}}</a></h3>
+                <p>{{duration}}</p>
+            </div>
+        </div>
+    {{/courses}}
+    {{^courses}}
+        <p>No courses available. Please check back later.</p>
+    {{/courses}}
+</div>
+{{> partials/footer}}

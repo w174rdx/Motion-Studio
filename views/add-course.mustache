@@ -1,0 +1,39 @@
+{{> partials/header}}
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <h1>Add New Course</h1>
+        <p>Create a new course with details and a picture</p>
+    </header>
+
+    {{#error}}
+        <div class="alert alert-error">{{error}}</div>
+    {{/error}}
+
+    <section class="dashboard-section">
+        <h2>Course Details</h2>
+        <form action="/organiser/add" method="POST" enctype="multipart/form-data" class="course-form">
+            <label>Name: <input type="text" name="name" required></label>
+            <label>Duration: <input type="text" name="duration" required></label>
+            <label>Picture: <input type="file" name="picture" accept="image/*"></label>
+
+            <h3>Classes</h3>
+            <div id="classes-container">
+                <!-- Initial class entry -->
+                <div class="class-entry">
+                    <label>Date: <input type="date" name="classes[0][date]" required></label>
+                    <label>Time: <input type="time" name="classes[0][time]" required></label>
+                    <label>Description: <input type="text" name="classes[0][description]" required></label>
+                    <label>Location: <input type="text" name="classes[0][location]" required></label>
+                    <label>Price: <input type="text" name="classes[0][price]" required></label>
+                    <button type="button" class="btn btn-danger remove-class">Remove Class</button>
+                    <hr>
+                </div>
+            </div>
+            <button type="button" id="add-class" class="btn btn-info">Add Another Class</button>
+            <button type="submit" class="btn btn-primary add-course">Add Course</button>
+        </form>
+    </section>
+</div>
+<!-- IMPORTANT: Do not remove this script, as it handles dynamic class addition/removal -->
+<script src="/js/script.js"></script>
+{{> partials/footer}}

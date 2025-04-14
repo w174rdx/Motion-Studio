@@ -1,0 +1,8 @@
+{{> partials/header}}
+<h1>Class List for {{course.name}}</h1>
+<ul>
+    {{#bookings}}
+        <li>{{name}} ({{email}})</li>
+    {{/bookings}}
+</ul>
+{{> partials/footer}}
