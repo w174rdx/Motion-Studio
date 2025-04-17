@@ -1,8 +1,34 @@
 {{> partials/header}}
-<h1>Class List for {{course.name}}</h1>
-<ul>
-    {{#bookings}}
-        <li>{{name}} ({{email}})</li>
-    {{/bookings}}
-</ul>
+<!-- Main dashboard -->
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <h1>Class List for {{course.name}}</h1>
+    </header>
+
+    <!-- Participant list -->
+    <section class="dashboard-section">
+        <h2>Participants</h2>
+        <!-- Participant cards -->
+        <div class="participant-list">
+            {{#bookings}}
+                <div class="participant-card">
+                    <div class="participant-info">
+                        <p><strong>Name:</strong> {{name}}</p>
+                        <p><strong>Email:</strong> {{email}}</p>
+                    </div>
+                    <!-- Form to remove a participant -->
+                    <form action="/organiser/remove-participant/{{courseId}}/{{_id}}" method="POST">
+                        <button type="submit" class="btn btn-danger remove-participant">Remove</button>
+                    </form>
+                </div>
+            {{/bookings}}
+            <!-- Message for no bookings -->
+            {{^bookings}}
+                <p>No participants have booked this course yet.</p>
+            {{/bookings}}
+        </div>
+        <!-- Link to return to dashboard -->
+        <a href="/organiser/dashboard" class="btn btn-secondary">Back to Dashboard</a>
+    </section>
+</div>
 {{> partials/footer}}

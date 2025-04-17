@@ -3,9 +3,12 @@
 {{#success}}
     <p style="color: green;">{{success}}</p>
 {{/success}}
+<!-- Course cards -->
 <div class="course-list">
+    <!-- Iterates over available courses -->
     {{#courses}}
         <div class="course-card">
+            <!-- Course image -->
             <div class="course-image">
                 {{#picture}}
                     <img src="{{picture}}" alt="{{name}} image">
@@ -14,12 +17,14 @@
                     <div class="no-image">No Image</div>
                 {{/picture}}
             </div>
+            <!-- Course details -->
             <div class="course-info">
                 <h3><a href="/courses/{{_id}}">{{name}}</a></h3>
                 <p>{{duration}}</p>
             </div>
         </div>
     {{/courses}}
+    <!-- Message for no courses -->
     {{^courses}}
         <p>No courses available. Please check back later.</p>
     {{/courses}}

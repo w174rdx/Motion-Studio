@@ -24,7 +24,7 @@ app.use(session({
     saveUninitialized: false
 }));
 
-// Initialize NeDB databases
+// Initialise NeDB databases
 const usersDB = new Datastore({ filename: 'data/users.db', autoload: true });
 const coursesDB = new Datastore({ filename: 'data/courses.db', autoload: true });
 const bookingsDB = new Datastore({ filename: 'data/bookings.db', autoload: true });
@@ -45,5 +45,5 @@ app.use('/organiser', organiserRoutes);
 
 // Start server
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at http://localhost:${port}`); // Should display message if running
 });

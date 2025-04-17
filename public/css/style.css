@@ -1,10 +1,12 @@
 /* Reset and Base Styles */
+/* Initialises default styles for all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Sets the default font, background, text colour, and line spacing for the body */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #f5f7fa;
@@ -13,41 +15,49 @@ body {
 }
 
 /* Typography */
+/* Defines styles for headings */
 h1, h2, h3 {
     color: #1a3c6d;
     margin-bottom: 1rem;
 }
 
+/* Sets size and weight for main heading */
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
 }
 
+/* Sets size and weight for secondary heading */
 h2 {
     font-size: 1.75rem;
     font-weight: 600;
 }
 
+/* Sets size and weight for tertiary heading */
 h3 {
     font-size: 1.25rem;
     font-weight: 500;
 }
 
+/* Adds spacing below paragraphs */
 p {
     margin-bottom: 1rem;
 }
 
+/* Styles hyperlinks with colour transition */
 a {
     text-decoration: none;
     color: #3b82f6;
     transition: color 0.3s ease;
 }
 
+/* Changes link colour on hover */
 a:hover {
     color: #1d4ed8;
 }
 
 /* Navigation */
+/* Styles the navigation bar */
 nav {
     background-color: #1a3c6d;
     padding: 1rem 2rem;
@@ -57,6 +67,7 @@ nav {
     z-index: 1000;
 }
 
+/* Styles navigation links */
 nav a {
     color: #ffffff;
     margin-right: 1.5rem;
@@ -64,11 +75,13 @@ nav a {
     font-size: 1rem;
 }
 
+/* Changes navigation link colour on hover */
 nav a:hover {
     color: #93c5fd;
 }
 
 /* Main Content */
+/* Styles the main content area */
 main {
     padding: 2rem;
     max-width: 1200px;
@@ -77,6 +90,7 @@ main {
 }
 
 /* Footer */
+/* Styles the footer */
 footer {
     background-color: #1a3c6d;
     color: #ffffff;
@@ -88,12 +102,14 @@ footer {
 }
 
 /* Forms */
+/* Configures form layout */
 form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
+/* Styles form labels */
 label {
     display: flex;
     flex-direction: column;
@@ -101,6 +117,7 @@ label {
     color: #1a3c6d;
 }
 
+/* Styles input fields, dropdowns, and textareas */
 input, select, textarea {
     padding: 0.75rem;
     font-size: 1rem;
@@ -110,12 +127,14 @@ input, select, textarea {
     transition: border-color 0.3s ease;
 }
 
+/* Styles input fields on focus */
 input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: #3b82f6;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
+/* Styles buttons */
 button {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -128,15 +147,18 @@ button {
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
+/* Changes button appearance on hover */
 button:hover {
     background-color: #1d4ed8;
     transform: translateY(-1px);
 }
 
+/* Styles button when active */
 button:active {
     transform: translateY(0);
 }
 
+/* Styles disabled buttons */
 button:disabled {
     background-color: #d1d5db;
     color: #6b7280;
@@ -144,12 +166,14 @@ button:disabled {
     opacity: 0.6;
 }
 
+/* Maintains disabled button style on hover */
 button:disabled:hover {
     background-color: #d1d5db;
     transform: none;
 }
 
 /* Specific Form Styles */
+/* Styles specific forms with consistent design */
 .auth-form, .book-form, .course-form, .add-user-form {
     background-color: #ffffff;
     border: 1px solid #e5e7eb;
@@ -160,18 +184,22 @@ button:disabled:hover {
     margin: 0 auto;
 }
 
+/* Sets width for authentication form */
 .auth-form {
     max-width: 350px;
 }
 
+/* Sets width for course form */
 .course-form {
     max-width: 600px;
 }
 
+/* Sets width for add user form */
 .add-user-form {
     max-width: 400px;
 }
 
+/* Styles booked message text */
 .booked-message {
     color: #6b7280;
     font-style: italic;
@@ -180,6 +208,7 @@ button:disabled:hover {
 }
 
 /* Class Entry (Add/Edit Course) */
+/* Styles class entry container */
 .class-entry {
     background-color: #f9fafb;
     border: 1px solid #e5e7eb;
@@ -189,33 +218,40 @@ button:disabled:hover {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 }
 
+/* Styles add class button */
 #add-class {
     background-color: #10b981;
 }
 
+/* Changes add class button colour on hover */
 #add-class:hover {
     background-color: #059669;
 }
 
+/* Styles remove class button */
 .remove-class {
     background-color: #ef4444;
     margin-top: 0.5rem;
 }
 
+/* Changes remove class button colour on hover */
 .remove-class:hover {
     background-color: #dc2626;
 }
 
+/* Styles add course button */
 .add-course {
     background-color: #3b82f6;
     margin-top: 1rem;
     font-size: 1.1rem;
 }
 
+/* Changes add course button colour on hover */
 .add-course:hover {
     background-color: #1d4ed8;
 }
 
+/* Styles horizontal rule */
 hr {
     border: 0;
     border-top: 1px solid #e5e7eb;
@@ -223,11 +259,13 @@ hr {
 }
 
 /* Course List and Details */
+/* Removes default list styling */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* Styles list items */
 li {
     margin-bottom: 1rem;
     padding: 1rem;
@@ -238,10 +276,12 @@ li {
     transition: transform 0.2s ease;
 }
 
+/* Adds hover effect to list items */
 li:hover {
     transform: translateY(-2px);
 }
 
+/* Styles course details container */
 .course-details {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -249,16 +289,19 @@ li:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
+/* Styles book now button */
 .book-now {
     background-color: #3b82f6;
     font-size: 1.1rem;
 }
 
+/* Changes book now button colour on hover */
 .book-now:hover {
     background-color: #1d4ed8;
 }
 
 /* Organiser Dashboard */
+/* Styles remove user form */
 .remove-user-form {
     display: flex;
     align-items: center;
@@ -267,12 +310,14 @@ li:hover {
     max-width: 400px;
 }
 
+/* Styles remove user form label */
 .remove-user-form label {
     font-weight: 600;
     margin-right: 1rem;
     color: #1a3c6d;
 }
 
+/* Styles remove user form dropdown */
 .remove-user-form select {
     flex-grow: 1;
     padding: 0.75rem;
@@ -280,66 +325,82 @@ li:hover {
     border-radius: 6px;
 }
 
+/* Styles remove organiser button */
 .remove-organiser {
     background-color: #ef4444;
 }
 
+/* Changes remove organiser button colour on hover */
 .remove-organiser:hover {
     background-color: #dc2626;
 }
 
+/* Styles add user button */
 .add-user {
     background-color: #10b981;
     font-size: 1.1rem;
 }
 
+/* Changes add user button colour on hover */
 .add-user:hover {
     background-color: #059669;
 }
 
 /* Responsive Design */
+/* Adjusts styles for smaller screens */
 @media (max-width: 768px) {
+    /* Reduces main content padding */
     main {
         padding: 1rem;
     }
 
+    /* Adjusts main heading size */
     h1 {
         font-size: 2rem;
     }
 
+    /* Adjusts secondary heading size */
     h2 {
         font-size: 1.5rem;
     }
 
+    /* Reduces navigation padding */
     nav {
         padding: 0.75rem 1rem;
     }
 
+    /* Adjusts navigation link spacing and size */
     nav a {
         margin-right: 1rem;
         font-size: 0.9rem;
     }
 
+    /* Makes forms full-width */
     .auth-form, .book-form, .course-form, .add-user-form {
         max-width: 100%;
     }
 
+    /* Stacks remove user form elements */
     .remove-user-form {
         flex-direction: column;
         align-items: stretch;
     }
 
+    /* Adds spacing below remove user form dropdown */
     .remove-user-form select {
         margin-bottom: 0.5rem;
     }
 }
+
 /* Dashboard Container */
+/* Styles dashboard container */
 .dashboard-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
 }
 
+/* Styles dashboard header */
 .dashboard-header {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -349,16 +410,19 @@ li:hover {
     text-align: center;
 }
 
+/* Adjusts dashboard header heading spacing */
 .dashboard-header h1 {
     margin-bottom: 0.5rem;
 }
 
+/* Styles dashboard header paragraph */
 .dashboard-header p {
     color: #6b7280;
     font-size: 1.1rem;
 }
 
 /* Alerts */
+/* Styles alert messages */
 .alert {
     padding: 1rem;
     border-radius: 6px;
@@ -367,17 +431,20 @@ li:hover {
     font-weight: 500;
 }
 
+/* Styles error alerts */
 .alert-error {
     background-color: #fee2e2;
     color: #dc2626;
 }
 
+/* Styles success alerts */
 .alert-success {
     background-color: #d1fae5;
     color: #059669;
 }
 
 /* Dashboard Sections */
+/* Styles dashboard sections */
 .dashboard-section {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -386,6 +453,7 @@ li:hover {
     margin-bottom: 2rem;
 }
 
+/* Styles dashboard section headings */
 .dashboard-section h2 {
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #e5e7eb;
@@ -393,11 +461,13 @@ li:hover {
 }
 
 /* Course List */
+/* Configures course list layout */
 .course-list {
     display: grid;
     gap: 1rem;
 }
 
+/* Styles course cards */
 .course-card {
     display: flex;
     justify-content: space-between;
@@ -409,43 +479,51 @@ li:hover {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Adds hover effect to course cards */
 .course-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles course info heading */
 .course-info h3 {
     font-size: 1.25rem;
     margin-bottom: 0.25rem;
 }
 
+/* Styles course info paragraph */
 .course-info p {
     color: #6b7280;
     font-size: 0.95rem;
 }
 
+/* Configures course actions layout */
 .course-actions {
     display: flex;
     gap: 0.5rem;
 }
 
 /* Organiser Management */
+/* Configures organiser management layout */
 .organiser-management {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
+/* Styles organiser list and add sections */
 .organiser-list, .organiser-add {
     flex: 1;
     min-width: 300px;
 }
 
+/* Adjusts organiser section headings */
 .organiser-list h3, .organiser-add h3 {
     margin-bottom: 1rem;
 }
 
 /* Buttons */
+/* Styles generic buttons */
 .btn {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -458,47 +536,58 @@ li:hover {
     text-align: center;
 }
 
+/* Styles primary buttons */
 .btn-primary {
     background-color: #3b82f6;
     color: #ffffff;
 }
 
+/* Changes primary button appearance on hover */
 .btn-primary:hover {
-    background-color: #1d4ed8;
+    background-color: #1e40af; /* Darker shade for hover effect */
+    color: #ffffff; /* Ensure text stays white on hover */
     transform: translateY(-1px);
 }
 
+/* Styles secondary buttons */
 .btn-secondary {
     background-color: #6b7280;
     color: #ffffff;
 }
 
+/* Changes secondary button appearance on hover */
 .btn-secondary:hover {
     background-color: #4b5563;
+    color: #ffffff;
     transform: translateY(-1px);
 }
 
+/* Styles danger buttons */
 .btn-danger {
     background-color: #ef4444;
     color: #ffffff;
 }
 
+/* Changes danger button appearance on hover */
 .btn-danger:hover {
     background-color: #dc2626;
     transform: translateY(-1px);
 }
 
+/* Styles info buttons */
 .btn-info {
     background-color: #10b981;
     color: #ffffff;
 }
 
+/* Changes info button appearance on hover */
 .btn-info:hover {
     background-color: #059669;
     transform: translateY(-1px);
 }
 
 /* File Input */
+/* Styles file input fields */
 input[type="file"] {
     padding: 0.5rem;
     border: 1px solid #d1d5db;
@@ -508,6 +597,7 @@ input[type="file"] {
 }
 
 /* Course Image */
+/* Styles course image container */
 .course-image {
     flex-shrink: 0;
     width: 100px;
@@ -517,12 +607,14 @@ input[type="file"] {
     border-radius: 6px;
 }
 
+/* Styles course image */
 .course-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Styles placeholder for missing images */
 .no-image {
     width: 100%;
     height: 100%;
@@ -536,6 +628,7 @@ input[type="file"] {
 }
 
 /* Welcome Section */
+/* Styles welcome section */
 .welcome-section {
     text-align: center;
     padding: 4rem 1rem;
@@ -546,41 +639,48 @@ input[type="file"] {
     max-width: 800px;
 }
 
+/* Styles welcome section heading */
 .welcome-section h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #1a3c6d;
 }
 
+/* Styles welcome section paragraph */
 .welcome-section p {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
     color: #6b7280;
 }
 
+/* Styles large buttons */
 .btn-large {
     padding: 1rem 2rem;
     font-size: 1.25rem;
 }
 
 /* Features Section */
+/* Styles features section */
 .features-section {
     padding: 3rem 0;
     text-align: center;
 }
 
+/* Styles features section heading */
 .features-section h2 {
     margin-bottom: 2rem;
     border-bottom: 2px solid #e5e7eb;
     padding-bottom: 0.5rem;
 }
 
+/* Configures features grid layout */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
+/* Styles feature cards */
 .feature-card {
     background-color: #ffffff;
     padding: 2rem;
@@ -589,21 +689,25 @@ input[type="file"] {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Adds hover effect to feature cards */
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles feature card heading */
 .feature-card h3 {
     margin-bottom: 0.75rem;
     color: #1a3c6d;
 }
 
+/* Styles feature card paragraph */
 .feature-card p {
     color: #6b7280;
 }
 
 /* CTA Section */
+/* Styles call-to-action section */
 .cta-section {
     background-color: #1a3c6d;
     color: #ffffff;
@@ -613,23 +717,27 @@ input[type="file"] {
     margin: 2rem 0;
 }
 
+/* Styles CTA section heading */
 .cta-section h2 {
     color: #ffffff;
     margin-bottom: 1rem;
 }
 
+/* Styles CTA section paragraph */
 .cta-section p {
     color: #e5e7eb;
     margin-bottom: 1.5rem;
 }
 
 /* About Container */
+/* Styles about page container */
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
 }
 
+/* Styles about page header */
 .about-header {
     text-align: center;
     padding: 1.5rem;
@@ -639,20 +747,24 @@ input[type="file"] {
     margin-bottom: 2rem;
 }
 
+/* Adjusts about header heading spacing */
 .about-header h1 {
     margin-bottom: 0.5rem;
 }
 
+/* Styles about header paragraph */
 .about-header p {
     color: #6b7280;
     font-size: 1.1rem;
 }
 
 /* Mission Section */
+/* Styles mission section */
 .mission-section {
     padding: 3rem 0;
 }
 
+/* Styles mission section heading */
 .mission-section h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -660,6 +772,7 @@ input[type="file"] {
     padding-bottom: 0.5rem;
 }
 
+/* Configures mission content layout */
 .mission-content {
     display: flex;
     gap: 2rem;
@@ -667,21 +780,25 @@ input[type="file"] {
     flex-wrap: wrap;
 }
 
+/* Styles mission text */
 .mission-text {
     flex: 1;
     min-width: 300px;
 }
 
+/* Styles mission text paragraphs */
 .mission-text p {
     margin-bottom: 1rem;
     color: #6b7280;
 }
 
+/* Styles mission image container */
 .mission-image {
     flex: 1;
     min-width: 300px;
 }
 
+/* Styles mission image */
 .mission-image img {
     width: 100%;
     height: auto;
@@ -690,6 +807,7 @@ input[type="file"] {
 }
 
 /* Team Section */
+/* Styles team section */
 .team-section {
     padding: 3rem 0;
     text-align: center;
@@ -699,18 +817,21 @@ input[type="file"] {
     margin-bottom: 2rem;
 }
 
+/* Styles team section heading */
 .team-section h2 {
     margin-bottom: 2rem;
     border-bottom: 2px solid #e5e7eb;
     padding-bottom: 0.5rem;
 }
 
+/* Configures team grid layout */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
+/* Styles team cards */
 .team-card {
     padding: 2rem;
     border-radius: 8px;
@@ -718,68 +839,103 @@ input[type="file"] {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Adds hover effect to team cards */
 .team-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles team card heading */
 .team-card h3 {
     margin-bottom: 0.5rem;
     color: #1a3c6d;
 }
 
+/* Styles team role text */
 .team-role {
     font-size: 0.95rem;
     color: #3b82f6;
     margin-bottom: 0.75rem;
 }
 
+/* Styles team card paragraph */
 .team-card p {
     color: #6b7280;
 }
 
+/* Responsive adjustments for mission and team sections */
 @media (max-width: 768px) {
+    /* Stacks mission content vertically */
     .mission-content {
         flex-direction: column;
     }
 
+    /* Makes mission text and image full-width */
     .mission-text, .mission-image {
         width: 100%;
     }
 
+    /* Reduces team section padding */
     .team-section {
         padding: 2rem 0;
     }
 }
 
+/* Center the auth link text */
+/* Styles authentication link container */
+.auth-link {
+    text-align: center;
+    margin-top: 1rem;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* Styles authentication links */
+.auth-link a {
+    color: #3b82f6;
+}
+
+/* Changes authentication link colour on hover */
+.auth-link a:hover {
+    color: #1d4ed8;
+}
+
+/* Additional responsive adjustments */
 @media (max-width: 768px) {
+    /* Stacks course card elements vertically */
     .course-card {
         flex-direction: column;
         align-items: flex-start;
     }
 
+    /* Removes course image margin */
     .course-image {
         margin-right: 0;
         margin-bottom: 1rem;
     }
 
+    /* Reduces welcome section padding */
     .welcome-section {
         padding: 2rem 1rem;
     }
 
+    /* Adjusts welcome section heading size */
     .welcome-section h1 {
         font-size: 2rem;
     }
 
+    /* Adjusts welcome section paragraph size */
     .welcome-section p {
         font-size: 1rem;
     }
 
+    /* Adjusts large button size */
     .btn-large {
         padding: 0.75rem 1.5rem;
         font-size: 1rem;
     }
 
+    /* Reduces features section padding */
     .features-section {
         padding: 2rem 0;
     }

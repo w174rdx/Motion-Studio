@@ -1,9 +1,11 @@
 {{> partials/header}}
 <div class="course-details">
+    <!-- Displays course information -->
     <h1>{{course.name}}</h1>
     <p><strong>Duration:</strong> {{course.duration}}</p>
     <h2>Classes</h2>
     <ul>
+        <!-- Course classes -->
         {{#course.classes}}
             <li>
                 <p><strong>Date:</strong> {{date}}</p>
@@ -14,16 +16,20 @@
             </li>
         {{/course.classes}}
     </ul>
+    <!-- Booking section -->
     <h2>Book This Course</h2>
     {{#error}}
         <p style="color: red;">{{error}}</p>
     {{/error}}
+    <!-- Shows booked status message -->
     {{#hasBooked}}
         <p class="booked-message">You have already booked this course.</p>
     {{/hasBooked}}
+    <!-- Form for booking the course -->
     <form action="/courses/{{course._id}}/book" method="POST" class="book-form">
         <label>Name: <input type="text" name="name" value="{{#user}}{{user.name}}{{/user}}" required></label><br>
         <label>Email: <input type="email" name="email" value="{{#user}}{{user.email}}{{/user}}" required></label><br>
+        <!-- Submit button, disabled if already booked -->
         <button type="submit" {{#hasBooked}}disabled{{/hasBooked}} class="book-now">Book Now</button>
     </form>
 </div>

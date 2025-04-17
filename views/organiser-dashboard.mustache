@@ -1,20 +1,26 @@
 {{> partials/header}}
+<!-- Main dashboard container -->
 <div class="dashboard-container">
     <header class="dashboard-header">
         <h1>Organiser Dashboard</h1>
         <p>Welcome, {{user.email}}</p>
     </header>
 
+    <!-- Displays error message if present -->
     {{#error}}
         <div class="alert alert-error">{{error}}</div>
     {{/error}}
+    <!-- Displays success message if present -->
     {{#success}}
         <div class="alert alert-success">{{success}}</div>
     {{/success}}
 
+    <!-- Section for course management -->
     <section class="dashboard-section">
         <h2>Manage Courses</h2>
+        <!-- Link to add new course -->
         <a href="/organiser/add" class="btn btn-primary">Add New Course</a>
+        <!-- List of courses -->
         <div class="course-list">
             {{#courses}}
                 <div class="course-card">
@@ -22,8 +28,10 @@
                         <h3>{{name}}</h3>
                         <p>{{duration}}</p>
                     </div>
+                    <!-- Course action buttons -->
                     <div class="course-actions">
                         <a href="/organiser/edit/{{_id}}" class="btn btn-secondary">Edit</a>
+                        <!-- Form to delete course -->
                         <form action="/organiser/delete/{{_id}}" method="POST">
                             <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
@@ -31,17 +39,21 @@
                     </div>
                 </div>
             {{/courses}}
+            <!-- Message for no courses -->
             {{^courses}}
                 <p>No courses available. Add a new course to get started.</p>
             {{/courses}}
         </div>
     </section>
 
+    <!-- Section for organiser management -->
     <section class="dashboard-section">
         <h2>Manage Organisers</h2>
         <div class="organiser-management">
+            <!-- Organiser removal section -->
             <div class="organiser-list">
                 <h3>Organisers</h3>
+                <!-- Form to remove organiser -->
                 <form action="/organiser/remove-organiser" method="POST" class="remove-user-form">
                     <select name="email" id="organiser-select" required>
                         <option value="">-- Select Organiser --</option>
@@ -52,8 +64,10 @@
                     <button type="submit" class="btn btn-danger">Remove Selected</button>
                 </form>
             </div>
+            <!-- Organiser addition section -->
             <div class="organiser-add">
                 <h3>Add Organiser</h3>
+                <!-- Form to add new organiser -->
                 <form action="/organiser/add-user" method="POST" class="add-user-form">
                     <label>Email: <input type="email" name="email" required></label>
                     <label>Password: <input type="password" name="password" required></label>

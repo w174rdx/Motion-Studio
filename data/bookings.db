@@ -1,3 +1,8 @@
 {"courseId":"mWJRKPcErdgIQyMV","name":"test","email":"test@test.com","bookedAt":{"$$date":1744538462199},"_id":"02HoCGqWOK7GCTgh"}
 {"courseId":"mWJRKPcErdgIQyMV","name":"test","email":"test@test.com","bookedAt":{"$$date":1744538456706},"_id":"8gh0MjN4RbiMmvSH"}
-{"courseId":"4tj2DDB6xgv32XvL","name":"test","email":"test@test.com","bookedAt":{"$$date":1744621609252},"_id":"tAYodpJhJr4u46DU"}
+{"courseId":"NQkDFccAIj09tpDP","name":"Edmond Cselik","email":"edmondcselik@gmail.com","bookedAt":{"$$date":1744791384577},"_id":"CWshihOezaMRVO1x"}
+{"courseId":"gshEQBMGjMLJZt2B","name":"Edmond Cselik","email":"edmondcselik@gmail.com","bookedAt":{"$$date":1744791395506},"_id":"WOMFWm0e8g4PPnLr"}
+{"courseId":"NQkDFccAIj09tpDP","name":"user","email":"user@test.com","bookedAt":{"$$date":1744791403519},"_id":"ZuW9rup7qMiQvGXy"}
+{"courseId":"gshEQBMGjMLJZt2B","name":"user","email":"user@test.com","bookedAt":{"$$date":1744791406555},"_id":"zmXQc7fxjF8NQzLD"}
+{"$$deleted":true,"_id":"CWshihOezaMRVO1x"}
+{"$$deleted":true,"_id":"ZuW9rup7qMiQvGXy"}

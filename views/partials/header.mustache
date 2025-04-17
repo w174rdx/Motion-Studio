@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav>
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/courses">Courses</a>
         {{#user}}
             {{#isOrganiser}}
+                <!-- Organiser dashboard link -->
                 <a href="/organiser/dashboard">Dashboard</a>
             {{/isOrganiser}}
+            <!-- Logout link -->
             <a href="/logout">Logout</a>
         {{/user}}
+        <!-- Login/register links -->
         {{^user}}
             <a href="/login">Login</a>
             <a href="/register">Register</a>

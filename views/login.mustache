@@ -1,12 +1,15 @@
 {{> partials/header}}
-<h1>Login</h1>
+<h1 style="text-align: center;">Login</h1>
+<!-- Displays error message if present -->
 {{#error}}
     <p style="color: red;">{{error}}</p>
 {{/error}}
+<!-- Login form -->
 <form action="/login" method="POST" class="auth-form">
     <label>Email: <input type="email" name="email" required></label><br>
     <label>Password: <input type="password" name="password" required></label><br>
     <button type="submit">Login</button>
 </form>
-<p>Not registered yet? <a href="/register">Click here to register</a></p>
+<!-- Link to registration page -->
+<p class="auth-link">Not registered yet? <a href="/register">Click here to register</a></p>
 {{> partials/footer}}

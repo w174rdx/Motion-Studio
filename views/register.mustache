@@ -1,16 +1,21 @@
 {{> partials/header}}
-<h1>Register</h1>
+<h1 style="text-align: center;">Register</h1>
+<!-- Displays error message if present -->
 {{#error}}
     <p style="color: red;">{{error}}</p>
 {{/error}}
+<!-- Displays success message if present -->
 {{#success}}
     <p style="color: green;">{{success}}</p>
 {{/success}}
+<!-- Registration form -->
 <form action="/register" method="POST" class="auth-form">
     <label>Name: <input type="text" name="name" required></label><br>
     <label>Email: <input type="email" name="email" required></label><br>
     <label>Password: <input type="password" name="password" required></label><br>
+    <!-- Submit button -->
     <button type="submit">Register</button>
 </form>
-<p>Already have an account? <a href="/login">Click here to login</a></p>
+<!-- Link to login page -->
+<p class="auth-link">Already have an account? <a href="/login">Click here to login</a></p>
 {{> partials/footer}}
