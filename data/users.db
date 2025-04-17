@@ -3,8 +3,8 @@
 {"email":"user@user.com","password":"$2b$10$N22ORzlMabLXpDTaJIKEfuRtRCtCA6J4hrHwC7l6wFObNZ27Zddc.","role":"user","_id":"TKEkDyXGsSAjTNgZ"}
 {"email":"edmondcselik@gmail.com","password":"$2b$10$GxZG2bFV0LeE2xJuX7dAdeswq0Mo31qg1m34v0Wsz5fCMRYafVFbu","role":"organiser","_id":"aaEX4D40ZkPR2M41"}
 {"name":"Edmond Cselik","email":"t@t.com","password":"$2b$10$T2AfLTnea5rPCXRS40v16.aMhLDnQmM3MnwfNXB/11G.trjclk53m","role":"user","_id":"cZRCdwhaNtNRLnlZ"}
+{"email":"organiser@test.com","password":"$2b$10$wY5FHaYKo6ffNh8tbl.Jr.1NDL/ddNp42jLDEXOaiCc2pTLQMlMPy","role":"organiser","_id":"durV9BbrvhRiOO6S"}
 {"name":"h","email":"h@h.com","password":"$2b$10$Sd4AJuicSO23bBYuiKhJ7u6rUPvfivcyjtD.r/zgx39ZyX8M8Ln4m","role":"user","_id":"ngghr7777BH22o4j"}
 {"email":"test@test.test","password":"$2b$10$eWLTfDvdp/aBRjoqO4Tu6OTRWYqfndlrd71jWImDQzbfSnzQsQ6Ya","role":"admin","_id":"q1biWpAsVQk3R01h"}
 {"name":"Edmond","email":"tt@tt.com","password":"$2b$10$p4.0P36Vam3XnmJ6RmJvmenT9cLY6xnpNFodUXg7WmRFm15kMsUO2","role":"user","_id":"qNRyefAisZRrC1Kv"}
 {"name":"ed","email":"ed@ed.ed","password":"$2b$10$tShKuePB.1aJbXfIUXIRke52sqfcjLXDbWE5c59oG88RKe3qFoWUe","role":"user","_id":"tcAZVwMyz42j1hSc"}
-{"email":"organiser@test.com","password":"$2b$10$wY5FHaYKo6ffNh8tbl.Jr.1NDL/ddNp42jLDEXOaiCc2pTLQMlMPy","role":"organiser","_id":"durV9BbrvhRiOO6S"}
