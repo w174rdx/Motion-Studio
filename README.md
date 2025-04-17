@@ -38,5 +38,46 @@ There is an active bug (sometimes) affecting the starting/re-starting of the Nod
 
 Please consider reporting any bugs or future improvements on my GitHub repository.
 
+-----------------------------------------------------
+
+## FEATURES ##
+
+1. Home Page:
+	- Greeting with a short sub-message and prompted to explore courses by clicking the "Explore Courses" button
+	- Short message boxes explaining why Motion Studio is the "right" choice
+	- Button to login page
+
+2. About Page:
+	- Short mission statement from Motion Studio
+	- Team cards with brief information
+	- Explore courses button
+
+3. Course/Class Page:
+	- List of courses/classes with picture, name and duration
+	- Clicking on the name of a course/class will take the user to a detailed view
+	- On the detailed information page the user can see data, time, description, location and price
+	- Users may book the course/class on this page
+	- Logged in users cannot book the same course/class twice
+
+4. Login Page:
+	- Users may enter email and password to login
+	- Invalid credentials will prompt an error message
+	- Register link
+
+5. Register Page
+	- Users may register using their preferred name, email address and password
+	- Invalid email addresses will prompt an error message
+	- Login link
+
+6. Organiser Features:
+	- Add, delete, edit courses/classes
+	- View class list for each course/class
+	- Organiser management (Add or delete organiser)
+	- Same features as non/logged in users
+
+7. User Features
+	- Same features as non-logged in users
+	- Logged in users may only book a course/class once
+
 
 
