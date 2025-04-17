@@ -2,6 +2,10 @@
 
 -----------------------------------------------------
 
+admin:
+	- email: organiser@test.com
+	- password: test
+
 #Setup Instructions:
 
 1. ** Download or Clone the Repository **
