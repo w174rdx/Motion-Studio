@@ -5,22 +5,24 @@
 #Setup Instructions:
 
 1. ** Download or Clone the Repository **
-	- Download the ZIP file or clone the repository from [link]
-	- COMMAND TO COPY HERE
+	- Download the ZIP file or clone the repository from https://github.com/w174rdx/Motion-Studio.git
+	- For SSH: git clone git@github.com:w174rdx/Motion-Studio.git
+	- For HTTPS: git clone https://github.com/w174rdx/Motion-Studio.git
+	- Alternatively, you can download the .ZIP directly from https://github.com/w174rdx/Motion-Studio.git
 
 2. ** Navigate to the Project Folder **
 	- Open terminal or CMD on your preferred system
 	- Use the 'cd' command to navigate to the project folder, for example:
-	- cd /path/dance-booking-system	 (replace /path/ with the actual path to your directory)
+	- cd /path/Motion-Studio (replace /path/ with the actual path to your directory)
 
-3. ** Remove Existing Dependencies **
+3. (OPTIONAL) ** Remove Existing Dependencies **
 
-There is an active bug affecting the starting/re-starting of the Node server. A temporary fix I found is removing the node_modules folder and package-lock.json file with the following code at each start/re-start:
+There is an active bug (sometimes) affecting the starting/re-starting of the Node server. A temporary fix I found is removing the node_modules folder and package-lock.json file with the following code at each start/re-start:
 	
 	- In your terminal or CMD use:
 
-		rm -rf /Path/dance-booking-system/node_modules
-		rm /Path/dance-booking-system/package-lock.json
+		rm -rf /Path/Motion-Studio/node_modules
+		rm /Path/Motion-Studio/package-lock.json
 		npm install
 
 	- Ensure that you change the /path/ to your actual directory where the files are saved!
